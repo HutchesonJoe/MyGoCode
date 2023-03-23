@@ -20,7 +20,15 @@ func newDeck() deck {
 
 //create a function that belongs to deck type which prints each card within the deck
 func (d deck) print() {
-	for _, card := range d {
-		fmt.Println(card)
+	for i, card := range d {
+		fmt.Println(i, card)
 	}
+}
+
+func deal(d deck, handSize int) (deck, deck){
+	return d[:handSize], d[handSize:]
+}
+
+func (d deck) toString() string{
+	[]string(d)
 }
