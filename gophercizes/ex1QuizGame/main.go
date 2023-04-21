@@ -12,7 +12,7 @@ var quizBucket = map[string]int{
 	"Total": 0,
 }
 
-var c chan any
+var c chan int
 
 func main(){
 	fmt.Println("You have 30 seconds to answer all questions")
@@ -48,4 +48,5 @@ func timer(){
 		
     time.Sleep(5 * time.Second)
 		fmt.Println("You ran out of time!")
+		os.Exit(0)
 }
