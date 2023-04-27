@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 type Client struct {
-	name string;
-	goal string;
+	name string
+	goal string
 	weight int
 }
 
-var clients = []Client{}
+var clients []*Client{}
 
 func main() {
 	var newName string
